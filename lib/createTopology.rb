@@ -6,5 +6,5 @@ require_relative "./topology_generator.rb"
 my_command_line_arguments = CommandLineArguments.new
 my_command_line_arguments.run
 
-topo_gen = TopologyGenerator.new my_command_line_arguments
+topo_gen = topologygenerator.new my_command_line_arguments
 topo_gen.generate

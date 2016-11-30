@@ -3,7 +3,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'topologyGenerator'
+gem 'topologygenerator'
 ```
 
 And then execute:
@@ -12,11 +12,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install topologyGenerator
+    $ gem install topologygenerator
 
 ## Usage
 
-For using the topologyGenerator gem, you will need to write your builder, and specify the uri from where the initial topology information will be get.
+For using the topologygenerator gem, you will need to write your builder, and specify the uri from where the initial topology information will be get.
 
 ## Development
 
@@ -26,7 +26,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/topologyGenerator. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/topologygenerator. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

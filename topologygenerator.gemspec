@@ -1,21 +1,21 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'topologyGenerator/version'
+require 'topologygenerator/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "topologyGenerator"
-  spec.version       = TopologyGenerator::VERSION
+  spec.name          = "topologygenerator"
+  spec.version       = topologygenerator::VERSION
   spec.authors       = ["Andrés Laurito"]
   spec.email         = ["andy.laurito@gmail.com"]
 
   spec.summary       = %q{Build a topology from a source provider and writes it using a builder.}
-  spec.description   = %q{The topologyGenerator gem is a tool for building from a network topology a custom output. 
+  spec.description   = %q{The topologygenerator gem is a tool for building from a network topology a custom output. 
                           This network topology can be obtained from a custom file written in ruby by the user, or 
                           by a SDN controller specifying the API uri (actually ONOS is support, and we are working 
                           for OpenDayLight support).
                           In case of the custom output, you have to write for each class defined in the network topology, 
-                          a module that describes how to build this class. The topologyGenerator gem will then use this 
+                          a module that describes how to build this class. The topologygenerator gem will then use this 
                           module's defined to generate the output desired.
                           You can see examples of use in my public github webpage.
                            }

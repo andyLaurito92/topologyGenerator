@@ -1,10 +1,10 @@
-require_relative "topologyGenerator/version"
+require_relative "topologygenerator/version"
 require_relative 'providers/apis/onos_topology_provider.rb'
 require_relative 'providers/customs/custom_topology_provider.rb'
 require_relative 'output_builder.rb'
 
 "Main class that reads a topology from a source provider and writes it using a builder"
-class TopologyGenerator
+class topologygenerator
   
   def initialize(arguments)
     validate arguments

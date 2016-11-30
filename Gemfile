@@ -8,5 +8,5 @@ gem 'spec'
 gem 'rspec-mocks' 
 gem 'simplecov', :require => false, :group => :test
 
-# Specify your gem's dependencies in topologyGenerator.gemspec
+# Specify your gem's dependencies in topologygenerator.gemspec
 #gemspec
