@@ -1,0 +1,5 @@
+
+lar_felix_0.egressPort.queueCapacity = -1;
+lar_felix_1.egressPort.queueCapacity = -1;
+lar_swrod_0.egressPort.queueCapacity = -1;
+lar_swrod_1.egressPort.queueCapacity = -1;

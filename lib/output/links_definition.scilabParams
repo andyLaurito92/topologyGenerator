@@ -1,0 +1,48 @@
+
+lar_felix_0.egressPort0.link.capacity = 40000000000 ;
+lar_felix_0.egressPort0.link.delay = 0; 
+
+lar_felix_0.egressPort1.link.capacity = 40000000000 ;
+lar_felix_0.egressPort1.link.delay = 0; 
+
+lar_felix_1.egressPort0.link.capacity = 40000000000 ;
+lar_felix_1.egressPort0.link.delay = 0; 
+
+lar_felix_1.egressPort1.link.capacity = 40000000000 ;
+lar_felix_1.egressPort1.link.delay = 0; 
+
+lar_switch_01.egressPort2.link.capacity = 40000000000 ;
+lar_switch_01.egressPort2.link.delay = 0; 
+
+lar_switch_02.egressPort2.link.capacity = 40000000000 ;
+lar_switch_02.egressPort2.link.delay = 0; 
+
+lar_switch_01.egressPort3.link.capacity = 40000000000 ;
+lar_switch_01.egressPort3.link.delay = 0; 
+
+lar_switch_02.egressPort3.link.capacity = 40000000000 ;
+lar_switch_02.egressPort3.link.delay = 0; 
+
+lar_switch_01.egressPort0.link.capacity = 40000000000 ;
+lar_switch_01.egressPort0.link.delay = 0; 
+
+felix_core_01.egressPort0.link.capacity = 40000000000 ;
+felix_core_01.egressPort0.link.delay = 0; 
+
+lar_switch_01.egressPort1.link.capacity = 40000000000 ;
+lar_switch_01.egressPort1.link.delay = 0; 
+
+felix_core_02.egressPort0.link.capacity = 40000000000 ;
+felix_core_02.egressPort0.link.delay = 0; 
+
+lar_switch_02.egressPort0.link.capacity = 40000000000 ;
+lar_switch_02.egressPort0.link.delay = 0; 
+
+felix_core_01.egressPort1.link.capacity = 40000000000 ;
+felix_core_01.egressPort1.link.delay = 0; 
+
+lar_switch_02.egressPort1.link.capacity = 40000000000 ;
+lar_switch_02.egressPort1.link.delay = 0; 
+
+felix_core_02.egressPort1.link.capacity = 40000000000 ;
+felix_core_02.egressPort1.link.delay = 0; 

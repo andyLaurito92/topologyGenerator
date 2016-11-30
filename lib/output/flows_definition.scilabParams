@@ -1,0 +1,30 @@
+
+flowFlow0_1.periodDistribution =  DISTRIBUTION_EXPONENTIAL;
+flowFlow0_1.periodDistribution_mu = 0.1;   //  mean for the exponential distribution.
+flowFlow0_1.packetSizeDistribution =  DISTRIBUTION_CONSTANT;
+flowFlow0_1.packetSizeDistribution_value = 1000.0;   //  value for the constant distribution
+
+flowFlow_Monitoring0_1.periodDistribution =  DISTRIBUTION_EXPONENTIAL;
+flowFlow_Monitoring0_1.periodDistribution_mu = 0.05;   //  mean for the exponential distribution.
+flowFlow_Monitoring0_1.packetSizeDistribution =  DISTRIBUTION_CONSTANT;
+flowFlow_Monitoring0_1.packetSizeDistribution_value = 500;   //  value for the constant distribution
+
+flowFlow_Control0_1.periodDistribution =  DISTRIBUTION_EXPONENTIAL;
+flowFlow_Control0_1.periodDistribution_mu = 0.06666666666666667;   //  mean for the exponential distribution.
+flowFlow_Control0_1.packetSizeDistribution =  DISTRIBUTION_CONSTANT;
+flowFlow_Control0_1.packetSizeDistribution_value = 100;   //  value for the constant distribution
+
+flowFlow1_1.periodDistribution =  DISTRIBUTION_EXPONENTIAL;
+flowFlow1_1.periodDistribution_mu = 0.1;   //  mean for the exponential distribution.
+flowFlow1_1.packetSizeDistribution =  DISTRIBUTION_CONSTANT;
+flowFlow1_1.packetSizeDistribution_value = 1000.0;   //  value for the constant distribution
+
+flowFlow_Monitoring1_1.periodDistribution =  DISTRIBUTION_EXPONENTIAL;
+flowFlow_Monitoring1_1.periodDistribution_mu = 0.05;   //  mean for the exponential distribution.
+flowFlow_Monitoring1_1.packetSizeDistribution =  DISTRIBUTION_CONSTANT;
+flowFlow_Monitoring1_1.packetSizeDistribution_value = 500;   //  value for the constant distribution
+
+flowFlow_Control1_1.periodDistribution =  DISTRIBUTION_EXPONENTIAL;
+flowFlow_Control1_1.periodDistribution_mu = 0.06666666666666667;   //  mean for the exponential distribution.
+flowFlow_Control1_1.packetSizeDistribution =  DISTRIBUTION_CONSTANT;
+flowFlow_Control1_1.packetSizeDistribution_value = 100;   //  value for the constant distribution

@@ -1,0 +1,4 @@
+sudo mn --custom /home/onos/Projects/tdaq.py --topo tdaq --controller remote,192.168.56.1 --mac --switch ovsk,protocols=OpenFlow13
+
+#Para correrla en mi maquina
+sudo mn --custom /home/alaurito/Desktop/repos/cern/topologyGenerator/lib/network_topologies_examples/phase1_topology_mininet/tdaq.py --topo tdaq --controller remote,127.0.0.1 --mac --switch ovsk,protocols=OpenFlow13
