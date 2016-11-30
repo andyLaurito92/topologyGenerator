@@ -1,3 +1,5 @@
+require 'byebug'
+
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -5,7 +7,7 @@ require 'topologygenerator/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "topologygenerator"
-  spec.version       = topologygenerator::VERSION
+  spec.version       = Topologygenerator::VERSION
   spec.authors       = ["Andrés Laurito"]
   spec.email         = ["andy.laurito@gmail.com"]
 
@@ -40,5 +42,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.4"
   spec.add_development_dependency "typhoeus"
   spec.add_development_dependency 'commander'
-  gem 
 end

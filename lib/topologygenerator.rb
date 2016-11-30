@@ -4,7 +4,7 @@ require_relative 'providers/customs/custom_topology_provider.rb'
 require_relative 'output_builder.rb'
 
 "Main class that reads a topology from a source provider and writes it using a builder"
-class topologygenerator
+class Topologygenerator
   
   def initialize(arguments)
     validate arguments

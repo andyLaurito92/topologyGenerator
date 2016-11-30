@@ -1,3 +1,3 @@
-class topologygenerator
+class Topologygenerator
   VERSION = "0.0.1"
 end
