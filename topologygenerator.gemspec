@@ -11,17 +11,17 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Andrés Laurito"]
   spec.email         = ["andy.laurito@gmail.com"]
 
-  spec.summary       = %q{Build a topology from a source provider and writes it using a builder.}
+  spec.summary       = %q{Build a topology from a source provider and generates an output using a custom builder.}
   spec.description   = %q{The topologygenerator gem is a tool for building from a network topology a custom output. 
                           This network topology can be obtained from a custom file written in ruby by the user, or 
                           by a SDN controller specifying the API uri (actually ONOS is support, and we are working 
                           for OpenDayLight support).
-                          In case of the custom output, you have to write for each class defined in the network topology, 
+                          When building your builder output, you have to write for each class defined in the network topology 
                           a module that describes how to build this class. The topologygenerator gem will then use this 
                           module's defined to generate the output desired.
-                          You can see examples of use in my public github webpage.
+                          You can see examples of how to use this gem in the public github webpage.
                            }
-  spec.homepage      = "https://github.com/andyLaurito92"
+  spec.homepage      = "https://github.com/andyLaurito92/topologygenerator"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

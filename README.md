@@ -62,28 +62,34 @@ my_custom_topology = topology_generator.generate {
 Suppose that you want to use the tree topology network example located at network_topologies_examples, and you want to use the PowerDevs builder located at builders_examples of this repository. This is how you would do this:
 
 ```ruby
-my_topology_generator = TopologyGenerator.new 
-my_custom_topology = topology_generator.generate {
-		"source" => "CUSTOM"
+my_topology_generator = Topologygenerator.new({
+		"source" => "CUSTOM",
 		"directory_concrete_builders" => "builders_examples/pdm_builders",
 		"output_directory" => "output",
 		"uri_resource" => "network_topologies_examples/tree_topology.rb" 
-	}
+	})
+my_custom_topology = topology_generator.generate
 ```
 
 Now, if you want to use a ONOS controller running in your local host, and use the Ruby builder, this is what you have to do:
 
 ```ruby
-my_topology_generator = TopologyGenerator.new 
-my_custom_topology = topology_generator.generate {
-		"source" => "ONOS"
+my_topology_generator = Topologygenerator.new({
+		"source" => "ONOS",
 		"directory_concrete_builders" => "builders_examples/ruby_builders",
 		"output_directory" => "output",
 		"uri_resource" => "http://127.0.0.1:8181/onos/v1/docs/" 
-	}
+	}) 
+my_custom_topology = topology_generator.generate
 ```
 
 If you need help to program either your provider or your builder, check the Providers Examples or Builders Examples for more information.
+
+You can also use the topologygenerator as an executable throw the createTopology.rb script. For using the topologygenerator as an executable, you have to use it like this:
+
+createTopology.rb source -n NAME_OF_SOURCE -o OUTPUT_DIRECTORY -u URI_RESOURCE -d CONCRETE_BUILDERS_DIRECTORY
+
+Where each of the options is the same as detailed above.
 
 ## Development
 
