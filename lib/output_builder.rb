@@ -15,7 +15,13 @@ class OutputBuilder
     end
 
     def build_output
-        Dir["#{@directory_concrete_builders}/*.rb"].each { |file| require "./#{file}" }
+        Dir["#{@directory_concrete_builders}/*.rb"].each { |file| 
+            if file[0] == '.' then
+                require "#{file}" 
+            else
+                require "./#{file}" 
+            end
+        }
         self.class.send(:include,OutputConcreteBuilder)
         validate_output_concrete_builder
 
