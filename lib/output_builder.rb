@@ -16,7 +16,7 @@ class OutputBuilder
 
     def build_output
         Dir["#{@directory_concrete_builders}/*.rb"].each { |file| 
-            if file[0] == '.' then
+            if file[0] == '/' then
                 require "#{file}" 
             else
                 require "./#{file}" 
