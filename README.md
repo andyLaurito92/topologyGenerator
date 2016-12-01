@@ -50,13 +50,13 @@ For using the topologygenerator gem, you will need to write your output builder,
 The use of the topology generator is as follow:
 
 ```ruby
-my_topology_generator = TopologyGenerator.new 
-my_custom_topology = topology_generator.generate {
+my_topology_generator = TopologyGenerator.new({
 		"source" => "name_of_my_provider", #Actually ONOS and CUSTOM are the options supported
 		"directory_concrete_builders" => "my_directory", #The directory where to locate the output builders
 		"output_directory" => "my_output_directory", #The directory where the output will be saved
 		"uri_resource" => "path_to_source" #Must be the rest api uri if ONOS is choosed or the path of a file if CUSTOM is choosed.
-	}
+	})
+my_custom_topology = topology_generator.generate 
 ```
 
 Suppose that you want to use the tree topology network example located at network_topologies_examples, and you want to use the PowerDevs builder located at builders_examples of this repository. This is how you would do this:
