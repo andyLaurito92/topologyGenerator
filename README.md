@@ -78,7 +78,7 @@ my_topology_generator = Topologygenerator.new({
 		"source" => "ONOS",
 		"directory_concrete_builders" => "builders_examples/ruby_builders",
 		"output_directory" => "output",
-		"uri_resource" => "http://127.0.0.1:8181/onos/v1/docs/" 
+		"uri_resource" => "http://127.0.0.1:8181/onos/v1/" 
 	}) 
 my_custom_topology = topology_generator.generate
 ```
