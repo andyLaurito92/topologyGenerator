@@ -60,12 +60,28 @@ This is the info that represents a router
         end        
     end
 
+=begin
+This is the info that represents a Host
+
+{
+  "id"=>"9A:4A:43:D4:36:45/None", 
+  "mac"=>"9A:4A:43:D4:36:45", 
+  "vlan"=>"None", 
+  "configured"=>false, 
+  "ipAddresses"=>["10.0.0.1"], 
+  "location"=>{
+    "elementId"=>"of:0000000000000002", 
+    "port"=>"1"
+  }
+}
+
+=end
     def add_hosts
         hosts_response = get_from_api 'hosts'
         hosts_info = (JSON.parse hosts_response.body)['hosts']
         hosts_info.each_with_index  do |host_info, index|
           
-          host = @topology.add_host host_info['id'] #host_info['mac']
+          host = @topology.add_host host_info['id'], host_info['ipAddresses'], host_info['mac']
             
           
           @topology.add_link "Link#{index}host_to_router",

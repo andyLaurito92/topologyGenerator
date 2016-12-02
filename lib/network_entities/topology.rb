@@ -24,7 +24,7 @@ class Topology
     elements_of_type Link
   end
 
-  def add_host(id)
+  def add_host(id, ips=["127.0.0.1"], mac="9A:4A:43:D4:36:45", queue_capacity=-1)
     raise "ID '#{id}' already exists in topology" if get_element_by_id id 
     
     new_host = Host.new id
