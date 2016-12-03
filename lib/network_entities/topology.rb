@@ -27,7 +27,7 @@ class Topology
   def add_host(id, ips=["127.0.0.1"], mac="9A:4A:43:D4:36:45", queue_capacity=-1)
     raise "ID '#{id}' already exists in topology" if get_element_by_id id 
     
-    new_host = Host.new id
+    new_host = Host.new id, ips, mac, queue_capacity
     @topology_elements.push new_host
     new_host
   end
