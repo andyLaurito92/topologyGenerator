@@ -132,9 +132,12 @@ links_between_routers_info is an array of elements of this kind
         raise Exception, "Destination must be either from class Router or class Host to ask for a path" unless [Host, Router].include? destination.class
         
         paths_response = get_from_api "paths/#{CGI.escape(source.id)}/#{CGI.escape(destination.id)}"
-        links_info = (JSON.parse paths_response.body)['paths'].first['links']
-
+        paths_info = (JSON.parse paths_response.body)['paths']
         path = Path.new(source,destination)
+        
+        return path if paths_info.size == 0
+        
+        links_info = paths_info.first['links']
 
         #If either the source or the destination are hosts, the path will return host instead of device
         first_link = links_info.shift
