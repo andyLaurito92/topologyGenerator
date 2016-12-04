@@ -6,7 +6,8 @@ require 'byebug'
 
 "Main class that reads a topology from a source provider and writes it using a builder"
 class Topologygenerator
-  
+  attr_reader :topology_provider, :output_builder
+
   def initialize(arguments)
     validate arguments
     @arguments = arguments
