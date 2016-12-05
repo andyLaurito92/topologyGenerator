@@ -10,14 +10,12 @@ class Link < NetworkElement
     bandwith ||= 500*1000*1000 # 500 Mb/s
     delay ||= 0
     
-    raise "Attempted to create an invalid Link. Invalid source #{src_element}" if (!src_element.is_a? Router) && (!src_element.is_a? Host)  
-    raise "Attempted to create an invalid Link. Invalid destination '#{dst_element}'" if (!dst_element.is_a? Router) && (!dst_element.is_a? Host)
+    raise "Attempted to create an invalid Link. Invalid source #{src_element.id}" if (!src_element.is_a? Router) && (!src_element.is_a? Host)  
+    raise "Attempted to create an invalid Link. Invalid destination '#{dst_element.id}'" if (!dst_element.is_a? Router) && (!dst_element.is_a? Host)
     raise "Attempted to create an invalid Link. Invalid source port '#{src_port}' must be an integer" if (!src_port.is_a? Integer)
     raise "Attempted to create an invalid Link. Invalid destination port '#{dst_port}' must be an integer" if (!dst_port.is_a? Integer)
-    raise "Invalid Source port. Port '#{src_port}' already in use for '#{src_element}'" if src_element.out_elements[src_port]
-    raise "Invalid Destination port. Port '#{dst_port}' already in use for '#{dst_element}'" if dst_element.in_elements[dst_port]
-    raise "#{src} was not found as an element of the topology" if src_element.nil?
-    raise "#{dst} was not found as an element of the topology" if dst_element.nil?
+    raise "Invalid Source port. Port '#{src_port}' already in use for '#{src_element.id}'" if src_element.out_elements[src_port]
+    raise "Invalid Destination port. Port '#{dst_port}' already in use for '#{dst_element.id}'" if dst_element.in_elements[dst_port]
     raise "Bandwith must be a number, #{bandwith} was recieved" unless bandwith.is_a? Integer
 
     @src_element = src_element
