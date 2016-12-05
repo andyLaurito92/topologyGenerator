@@ -1,5 +1,6 @@
 require_relative "topologygenerator/version"
 require_relative 'providers/apis/onos_topology_provider.rb'
+require_relative 'providers/apis/opendaylight_topology_provider.rb'
 require_relative 'providers/customs/custom_topology_provider.rb'
 require_relative 'output_builder.rb'
 require 'byebug'
@@ -15,6 +16,8 @@ class Topologygenerator
     case @arguments['source']
         when 'ONOS'
             @topology_provider = OnosTopologyProvider.new @arguments['uri_resource']
+        when 'OPENDAYLIGHT'
+            @topology_provider = OpendaylightTopologyProvider.new @arguments['uri_resource']
         when 'CUSTOM'
             @topology_provider = CustomTopologyProvider.new @arguments['uri_resource']
         else

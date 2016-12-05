@@ -35,12 +35,16 @@ class CommandLineArguments
             options.default :outDir => 'output'
             options.default :dirBuilders => 'builders_examples/pdm_builders/PhaseI'
           	new_source = options.name
-            raise ArgumentError, "The source '#{new_source}' is not one of the expected. Please type source --help to more information." unless ['ONOS','CUSTOM'].include? new_source
+            raise ArgumentError, "The source '#{new_source}' is not one of the expected. Please type source --help to more information." unless ['ONOS','OPENDAYLIGHT','CUSTOM'].include? new_source
 
             if new_source == 'ONOS'
                 new_uri_resource = options.uri 
                 new_uri_resource = ask 'http source for ONOS?:(example http://127.0.0.1:8181/onos/v1/)' unless new_uri_resource
                 raise ArgumentError, "You must specify a valid http source when the option ONOS is selected. #{new_uri_resource} is not a valid one" unless new_uri_resource =~ /\A#{URI::regexp(['http', 'https'])}\z/
+            elsif new_source == 'OPENDAYLIGHT'
+              new_uri_resource = options.uri 
+                new_uri_resource = ask 'http source for OPENDAYLIGHT?:(example http://localhost:8080/restconf/operational/network-topology:network-topology/topology/flow:1/)' unless new_uri_resource
+                raise ArgumentError, "You must specify a valid http source when the option OPENDAYLIGHT is selected. #{new_uri_resource} is not a valid one" unless new_uri_resource =~ /\A#{URI::regexp(['http', 'https'])}\z/
             elsif new_source == 'CUSTOM'
                 new_uri_resource = options.uri
                 new_uri_resource = ask 'uri source for CUSTOM?:(example network_topologies_examples/tree_topology.rb)' unless new_uri_resource
