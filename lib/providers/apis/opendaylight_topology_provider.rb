@@ -79,8 +79,7 @@ This is who it looks like the xml received by the opendaylight api
 =end
     
     def get_topology
-      response = Typhoeus.get "http://localhost:8080/restconf/operational/network-topology:network-topology/topology/flow:1/", userpwd:"admin:admin"
-
+      response = Typhoeus.get "#{@uri_resource}/restconf/operational/network-topology:network-topology/topology/flow:1/", userpwd:"admin:admin"
       topology_json_response = (JSON.parse response.body)['topology'].first
       nodes_info = topology_json_response['node']
       links_info = topology_json_response['link']
