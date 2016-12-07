@@ -62,7 +62,7 @@ module NetworkTopology
         flow_1_path.add_link link3
         @topology.add_flow "Flow1", 
                             10, 
-                            flow_1_path, 
+                            [flow_1_path], 
                             (ExponentialDistribution.new 1.0/6875), 
                             (ConstantDistribution.new 1000*8)
 
@@ -71,7 +71,7 @@ module NetworkTopology
         flow_2_path.add_link link3
         @topology.add_flow "Flow2", 
                             15, 
-                            flow_2_path, 
+                            [flow_2_path], 
                             (ExponentialDistribution.new 1.0/6875), 
                             (ConstantDistribution.new 1000*8)
 
@@ -80,7 +80,7 @@ module NetworkTopology
         flow_3_path.add_link link5
         @topology.add_flow "Flow3", 
                             20, 
-                            flow_3_path, 
+                            [flow_3_path], 
                             (ExponentialDistribution.new 1.0/6875), 
                             (ConstantDistribution.new 1000*8)                            
 
