@@ -97,7 +97,7 @@ This is who it looks like the xml received by the opendaylight api
         source = @topology.get_element_by_id link['source']['source-node']
         destiny = @topology.get_element_by_id link['destination']['dest-node']
 
-        #TODO: WHICH IS THE FORM OF FIND THE PORT OF THE HOST?
+        #TODO: WHICH IS THE FORM OF FINDING THE PORT OF THE HOST?
         source_port = (source.is_a? Host) ? 1 : (link['source']['source-tp'].gsub "#{source.id}:", '').to_i
         destiny_port = (destiny.is_a? Host) ? 1 : (link['destination']['dest-tp'].gsub "#{destiny.id}:", '').to_i
 
@@ -106,20 +106,6 @@ This is who it looks like the xml received by the opendaylight api
 
       @topology.topology_elements
     end    
-
-    def get_port_from_to(source, destiny)
-      source_info = nodes_info.select{ |node| node['node-id'] == source.id }.first
-      destiny_info = nodes_info.select{ |node| node['node-id'] == destiny.id }.first
-
-      byebug
-
-      if source.is_a? host
-        source_info
-      else
-        source_info['termination-point'].select{ |termination_point| termination_point  }
-      end
-
-    end
 
     def get_path_between(source, destination)
       raise NotImplementedError, "OpenDayLight provider: This method is not implemented!"      
