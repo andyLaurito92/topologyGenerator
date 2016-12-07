@@ -39,6 +39,6 @@ class Topologygenerator
       raise ArgumentError, "It is mandatory that arguments has a #{argument_name}" unless arguments.key? argument_name
     end
 
-    raise ArgumentError, "The source: #{@arguments['source']} is not one of the expected" unless LIST_PROVIDERS_IMPLEMENTED.include? @arguments['source']
+    raise ArgumentError, "The source: #{arguments['source']} is not one of the expected" unless LIST_PROVIDERS_IMPLEMENTED.include? arguments['source']
   end
 end
