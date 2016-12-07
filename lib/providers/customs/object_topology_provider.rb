@@ -6,7 +6,7 @@ class ObjectTopologyProvider < ITopologyProvider
   end
 
   def get_topology
-     @topology
+     @topology.topology_elements
   end
 
   def get_path_between(source, destination)
