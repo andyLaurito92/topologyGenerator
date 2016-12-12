@@ -12,14 +12,17 @@ Gem::Specification.new do |spec|
   spec.email         = ["andy.laurito@gmail.com"]
 
   spec.summary       = %q{Build a topology from a source provider and generates an output using a custom builder.}
-  spec.description   = %q{The topologygenerator gem is a tool for building from a network topology a custom output. 
-                          This network topology can be obtained from a custom file written in ruby by the user, or 
-                          by a SDN controller specifying the API uri (actually ONOS is support, and we are working 
-                          for OpenDayLight support).
-                          When building your builder output, you have to write for each class defined in the network topology 
-                          a module that describes how to build this class. The topologygenerator gem will then use this 
-                          module's defined to generate the output desired.
-                          You can see examples of how to use this gem in the public github webpage.
+  spec.description   = %q{The topologygenerator gem is a tool for building a custom output file format out of a 
+                          given network topology. 
+                          The topology can be retrieved from a custom file written in ruby by the user, or from an 
+                          SDN controller (by specifying the API uri).
+                          The ONOS controller is currently supported, while the API for OpenDayLight is in 
+                          progress. 
+
+                          When building your output, you have to write a module that describes how to each 
+                          class defined in the network topology. The topologygenerator gem will then use the 
+                            defined modules to generate the output desired. You can see examples of how to use 
+                            this gem in the public github webpage.
                            }
   spec.homepage      = "https://github.com/andyLaurito92/topologygenerator"
   spec.license       = "MIT"
