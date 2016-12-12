@@ -26,7 +26,7 @@ Suppose that you are designing your network, and you want to check if the design
 
 This gem is used by the Haikunet programming language for getting the initial topology and perform the semantic checker analysis. For more information of Haikunet, you can check the following link: 
 
-https://github.com/andyLaurito92/tesis/tree/master/haikunet
+https://github.com/andyLaurito92/haikunet
 
 ## Installation
 
