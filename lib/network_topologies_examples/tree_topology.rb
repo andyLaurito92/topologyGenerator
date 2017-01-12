@@ -96,7 +96,7 @@ module NetworkTopology
 
         path = Path.new(source,destination)        
         path.add_link first_link
-        path.add_link second_link
+        path.add_link second_link unless first_link.dst_element == destination
         path
     end
 end
