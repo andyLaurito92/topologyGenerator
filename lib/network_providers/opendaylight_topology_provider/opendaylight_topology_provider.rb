@@ -1,13 +1,10 @@
 require 'typhoeus'
-require_relative "../interface_topology_provider.rb"
-require_relative "../../network_entities/topology.rb"
-require_relative '../../network_entities/abstracts/path.rb'
 
-class OpendaylightTopologyProvider < ITopologyProvider
+module NetworkConcreteBuilder
 
     attr_accessor :uri_resource
     
-    def initialize(new_uri_resource)
+    def build_network_from(new_uri_resource)
           raise ArgumentError, 'No uri recieved as parameter' unless new_uri_resource
           @uri_resource = new_uri_resource
           @topology = Topology.new

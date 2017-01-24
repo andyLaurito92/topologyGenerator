@@ -1,15 +1,15 @@
-module OutputConcreteBuilder
+module SerializerConcreteBuilder
     OUTPUT_PDM_FILE_NAME = 'topology.pdm'
     OUTPUT_CPP_FILE_NAME = 'FlowDefinitions.cpp'
     OUTPUT_SCILAB_FILE_NAME = 'flows_definition.scilabParams'
 
-    def initialize_concrete_builder(topology_provider, directory_concrete_builders, output_directory)
+    def initialize_serializer(topology_provider, directory_concrete_builders, output_directory)
         @topology_provider = topology_provider
         @directory_concrete_builders = directory_concrete_builders # make's sense?
         @output_directory = output_directory
     end
 
-    def build_output_content
+    def serialize_network
         build_pdm_output
 
         build_flow_output

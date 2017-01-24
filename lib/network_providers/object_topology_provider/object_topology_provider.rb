@@ -1,7 +1,7 @@
-class ObjectTopologyProvider < ITopologyProvider
+class NetworkConcreteBuilder
   attr_reader :uri_resource
 
-  def initialize(topology)
+  def build_provider_from(topology)
       @topology = topology
   end
 

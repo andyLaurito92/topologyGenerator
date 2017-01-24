@@ -1,14 +1,14 @@
-module OutputConcreteBuilder
+module SerializerConcreteBuilder
     OUTPUT_RUBY_FILE_NAME = 'ruby_network_topology.rb'
 
-    def initialize_concrete_builder(topology_provider, directory_concrete_builders, output_directory)
+    def initialize_serializer(topology_provider, directory_concrete_builders, output_directory)
         @topology_provider = topology_provider
         @directory_concrete_builders = directory_concrete_builders # make's sense?
         @output_directory = output_directory
     end
 
-    def build_output_content
-        graph_elements = topology_provider.get_topology
+    def serialize_network
+        graph_elements = @topology_provider.get_topology
         
         graph_elements = graph_elements.select { |elem| [Host,Link,Router].include? elem.class }
 

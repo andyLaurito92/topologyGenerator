@@ -1,9 +1,7 @@
-require 'json'
-
-class CustomTopologyProvider < ITopologyProvider
+module NetworkConcreteBuilder
   attr_reader :uri_resource
 
-  def initialize(new_uri_resource)
+  def build_network_from(new_uri_resource)
       raise ArgumentError, 'No uri recieved as parameter' unless new_uri_resource
       @topology = Topology.new
       

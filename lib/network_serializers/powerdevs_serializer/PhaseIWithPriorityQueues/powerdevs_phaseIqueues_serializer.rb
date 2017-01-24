@@ -1,4 +1,4 @@
-module OutputConcreteBuilder
+module SerializerConcreteBuilder
     NUMBER_OF_PDM_MODELS_IN_STRUCTURE = 3
   
     OUTPUT_PDM_FILE_NAME = 'topology.pdm'
@@ -8,13 +8,13 @@ module OutputConcreteBuilder
     OUTPUT_LINKS_SCILAB_FILE_NAME = 'links_definition.scilabParams'
     OUTPUT_HOSTS_SCILAB_FILE_NAME = 'hosts_definition.scilabParams'
     
-    def initialize_concrete_builder(topology_provider, directory_concrete_builders, output_directory)
+    def initialize_serializer(topology_provider, directory_concrete_builders, output_directory)
         @topology_provider = topology_provider
         @directory_concrete_builders = directory_concrete_builders
         @output_directory = output_directory
     end
 
-    def build_output_content
+    def serialize_network
         build_host_link_router_output
 
         build_flow_output
