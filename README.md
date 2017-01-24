@@ -30,6 +30,8 @@ https://github.com/andyLaurito92/haikunet
 
 ## Installation
 
+### As a gem
+
 Add this line to your application's Gemfile:
 
 ```ruby
@@ -43,6 +45,14 @@ And then execute:
 Or install it yourself as:
 
     $ gem install topologygenerator
+
+### As a binary
+
+Run the following command in your command line
+
+```bash
+\curl -sSL https://raw.githubusercontent.com/andyLaurito92/topologygenerator/master/install_topologygenerator.sh | bash
+```
 
 ## Usage
 
