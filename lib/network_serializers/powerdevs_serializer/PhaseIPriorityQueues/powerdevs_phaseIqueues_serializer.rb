@@ -21,7 +21,7 @@ module SerializerConcreteBuilder
     end
 
     def build_host_link_router_output
-        graph_elements = topology_provider.get_topology
+        graph_elements = @topology_provider.get_topology
         pdm_topology = pmd_initial_struture 
         
         router_scilab_params = ''
@@ -80,7 +80,7 @@ module SerializerConcreteBuilder
     end    
 
     def build_flow_output
-        graph_elements = topology_provider.get_topology 
+        graph_elements = @topology_provider.get_topology 
 
         flows = graph_elements.select { |elem| elem.is_a? Flow }        
 

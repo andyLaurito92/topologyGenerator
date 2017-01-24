@@ -16,7 +16,7 @@ module SerializerConcreteBuilder
     end
 
     def build_pdm_output
-        graph_elements = topology_provider.get_topology
+        graph_elements = @topology_provider.get_topology
         
         graph_elements = graph_elements.select { |elem| [Host,Link,Router].include? elem.class }
 
@@ -53,7 +53,7 @@ module SerializerConcreteBuilder
     end 
 
     def build_flow_output
-        graph_elements = topology_provider.get_topology 
+        graph_elements = @topology_provider.get_topology 
 
         flows = graph_elements.select { |elem| elem.is_a? Flow }        
 

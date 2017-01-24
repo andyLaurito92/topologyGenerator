@@ -18,7 +18,7 @@ class Topologygenerator
 
     topology_provider_builder = NetworkProviderBuilder.new 
     topology_provider = topology_provider_builder.build_from @arguments[DIR_PROVIDER_BUILDERS], @arguments[URI_RESOURCE]
-    @topology_provider = topology_provider
+    @topology_provider = topology_provider #Should this be a provider or a topology??
   end
   
   def generate
