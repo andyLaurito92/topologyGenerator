@@ -4,7 +4,7 @@ require_relative 'command_line/command_line_arguments.rb'
 require_relative "topologygenerator.rb"
 require 'colorize'
 
-#begin
+begin
     my_command_line_arguments = CommandLineArguments.new
     my_command_line_arguments.run
 
@@ -15,7 +15,7 @@ require 'colorize'
             "uri_resource" => my_command_line_arguments.uri_resource
         })
     topo_gen.generate
-#rescue Exception => ex
-#  puts "#{ex.class}".red 
-#  puts "#{ex.message}".blue
-#end
+rescue Exception => ex
+  puts "#{ex.class}".red 
+  puts "#{ex.message}".blue
+end
