@@ -3,6 +3,8 @@ class NetworkConcreteBuilder
 
   def build_provider_from(topology)
       @topology = topology
+
+      self
   end
 
   def get_topology

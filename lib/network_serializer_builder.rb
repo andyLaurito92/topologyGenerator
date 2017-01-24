@@ -18,8 +18,6 @@ class NetworkSerializerBuilder
 
         validate_output_concrete_builder
 
-        byebug
-
         initialize_serializer topology, directory_concrete_serializer_builders, output_directory
 
         serialize_network

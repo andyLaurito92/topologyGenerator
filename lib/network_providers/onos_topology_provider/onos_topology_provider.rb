@@ -1,4 +1,5 @@
 require 'cgi'
+require 'json'
 require 'typhoeus'
 
 module NetworkConcreteBuilder

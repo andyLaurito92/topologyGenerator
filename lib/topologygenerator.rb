@@ -11,7 +11,7 @@ class Topologygenerator
   OUTPUT_DIRECTORY = 'output_directory'
   URI_RESOURCE = 'uri_resource'
 
-  attr_reader :topology
+  attr_reader :topology_provider
 
   def initialize(arguments)
     validate arguments
@@ -19,12 +19,12 @@ class Topologygenerator
 
     topology_provider_builder = NetworkProviderBuilder.new 
     topology_provider = topology_provider_builder.build_from @arguments[DIR_PROVIDER_BUILDERS], @arguments[URI_RESOURCE]
-    @topology = topology_provider.get_topology
+    @topology_provider = topology_provider
   end
   
   def generate
     topology_serializer_builder = NetworkSerializerBuilder.new
-    topology_serializer_builder.build_from @topology, @arguments[DIR_SERIALIZER_BUILDERS], @arguments[OUTPUT_DIRECTORY]   
+    topology_serializer_builder.build_from @topology_provider, @arguments[DIR_SERIALIZER_BUILDERS], @arguments[OUTPUT_DIRECTORY]   
   end
 
   def validate(arguments)

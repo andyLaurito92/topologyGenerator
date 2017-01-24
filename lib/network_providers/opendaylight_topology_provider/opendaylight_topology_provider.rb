@@ -1,13 +1,16 @@
 require 'typhoeus'
+require 'json'
 
 module NetworkConcreteBuilder
 
     attr_accessor :uri_resource
     
-    def build_network_from(new_uri_resource)
+    def build_provider_from(new_uri_resource)
           raise ArgumentError, 'No uri recieved as parameter' unless new_uri_resource
           @uri_resource = new_uri_resource
           @topology = Topology.new
+
+          self
     end
 
 =begin
