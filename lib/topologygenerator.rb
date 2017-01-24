@@ -3,7 +3,6 @@ require_relative 'network_provider_builder.rb'
 require_relative 'network_serializer_builder.rb'
 require 'byebug'
 
-"Main class that reads a topology from a source provider and writes it using a builder"
 class Topologygenerator
 
   DIR_PROVIDER_BUILDERS = 'dir_provider_builders'
