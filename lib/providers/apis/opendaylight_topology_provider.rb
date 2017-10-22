@@ -88,7 +88,8 @@ This is who it looks like the xml received by the opendaylight api
         if node['node-id'].include? 'openflow'
           @topology.add_router node['node-id']
         else
-          @topology.add_host node['node-id'], node['ip'], node['mac']
+          node_info = node["host-tracker-service:addresses"].first
+          @topology.add_host node['node-id'], [node_info['ip']], node_info['mac']
         end
       end
 
