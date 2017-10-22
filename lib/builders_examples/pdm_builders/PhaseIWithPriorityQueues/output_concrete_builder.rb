@@ -148,7 +148,7 @@ module OutputConcreteBuilder
                           }
                       Parameters
                           {
-                          Run at Init = Str; exec('#{File.absolute_path(@output_directory)}/Scilab/model.scilabParams', 0) ; Scilab Job at Init
+                          Run at Init = Str; exec('../examples/PhaseI_topologies/lar_with_hlt/model.scilabParams', 0) ; Scilab Job at Init
                           Run at External = Str;  ; Scilab Job when receive event
                           Run at Exit = Str;  ; Scilab Job at Exit
                           }
@@ -216,9 +216,9 @@ module OutputConcreteBuilder
                           }
                       Parameters
                           {
-                          initSimulationCommandName = Str; #{File.absolute_path(@output_directory)}/Scilab/firstSimulation.sce ; 
-                          eachSimulationCommandName = Str; #{File.absolute_path(@output_directory)}/Scilab/eachSimulation.sce ; 
-                          lastSimulationCommandName = Str; #{File.absolute_path(@output_directory)}/Scilab/lastSimulation.sce ; 
+                          initSimulationCommandName = Str; ../examples/PhaseI_topologies/lar_with_hlt/firstSimulation.sce ; 
+                          eachSimulationCommandName = Str; ../examples/PhaseI_topologies/lar_with_hlt/eachSimulation.sce ; 
+                          lastSimulationCommandName = Str; ../examples/PhaseI_topologies/lar_with_hlt/lastSimulation.sce ; 
                           }
                       }
                   }

@@ -5,7 +5,7 @@ module NetworkTopology
     G = 1000 * M  # Megas=10⁶
     
     # parameters
-    NUMBER_OF_FELIX_SERVERS = 2 # this generates 1:1 connections with sw_rod, so NUMBER_OF_FELIX_SERVERS=numberOfSWRODServers
+    NUMBER_OF_FELIX_SERVERS = 13 # this generates 1:1 connections with sw_rod, so NUMBER_OF_FELIX_SERVERS=numberOfSWRODServers
     LINK_BW_BITS_S =   40  * G # 40 Gbps
     FELIX_GENERATION_PERIOD = ExponentialDistribution.new 1/10.0 # distribution period in seconds
     FELIX_GENERATION_SIZE = ConstantDistribution.new 1.0*K  #distribution size in bits
